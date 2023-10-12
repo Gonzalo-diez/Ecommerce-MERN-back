@@ -152,6 +152,15 @@ passport.deserializeUser((id, done) => {
   });
 });
 
+const corsOptions = {
+  origin: 'https://mercadoexpress-front.netlify.app/', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
+
 app.use(express.json());
 app.use(cors());
 app.use(
