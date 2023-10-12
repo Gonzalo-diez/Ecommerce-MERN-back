@@ -9,7 +9,7 @@ const app = express();
 
 
 // Conexión a la base de datos MongoDB
-mongoose.connect("mongodb+srv://gonzalo:contrase%C3%B1a123@localhost/Ecommerce?authMechanism=DEFAULT", {
+mongoose.connect("mongodb://localhost:27017/Ecommerce", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -153,7 +153,7 @@ passport.deserializeUser((id, done) => {
 });
 
 const corsOptions = {
-  origin: 'https://mercadoexpress-front.netlify.app/', 
+  origin: 'https://mercadoexpress-front.netlify.app/', // Reemplaza con la URL de tu aplicación de Netlify
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
