@@ -9,7 +9,7 @@ const app = express();
 
 
 // Conexión a la base de datos MongoDB
-mongoose.connect("mongodb://localhost:27017/Ecommerce", {
+mongoose.connect("mongodb+srv://gonzalo:contrase%C3%B1a123@localhost/Ecommerce?authMechanism=DEFAULT", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
